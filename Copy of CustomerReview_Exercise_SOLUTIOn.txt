@@ -1,0 +1,16 @@
+1.	Provide a way to get a product’s total number of customer reviews whose ratings are within a given range (inclusive).
+
+Solution - getTotalReviewsForProductOnInclusiveRating based on initialRatingRange,finalRatingRange
+
+2.	Add the following additional checks before creating a customer review:  DefaultCustomerReviewService.java createCustomerReview
+		a.	Your service should read a list of curse words. This list should not be defined in Java class. 
+		b.	Check if Customer’s comment contains any of these curse words. If it does, throw an exception with a message.
+		c.	Check if the rating is not < 0.  If it is < 0, throw an exception with a message.
+
+Solution - Throw errro based on COmment and Rating, methods are checkComment,checkRating
+
+3.	Ensure the new functionality can be used elsewhere in the application (i.e.  a bean containing the new functionality is defined within the customerreview-spring.xml).
+
+Solution -
+1. GET Properties file value  by PropertyPlaceholderConfigurere
+2. Use Curse Value in DefaultCustomerReviewService
